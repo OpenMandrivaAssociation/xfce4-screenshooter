@@ -53,4 +53,3 @@ rm -rf %{buildroot}
 %{_mandir}/man1/*
 %{_datadir}/xfce4/doc/*/images/*.png
 %{_datadir}/xfce4/doc/*/*.html
-   
