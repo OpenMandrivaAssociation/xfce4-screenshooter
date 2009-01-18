@@ -51,7 +51,6 @@ rm -rf %{buildroot}
 %{_datadir}/applications/xfce4-screenshooter.desktop
 %{_iconsdir}/hicolor/*/apps/*.*g
 %{_mandir}/man1/*
-%{_datadir}/xfce4/doc/C/images/xfce4-screenshooter-dialog.png
-%{_datadir}/xfce4/doc/C/xfce4-screenshooter.html
-%{_datadir}/xfce4/doc/fr/images/xfce4-screenshooter-dialog.png
-%{_datadir}/xfce4/doc/fr/xfce4-screenshooter.html
+%{_datadir}/xfce4/doc/*/images/*.png
+%{_datadir}/xfce4/doc/*/*.html
+   
