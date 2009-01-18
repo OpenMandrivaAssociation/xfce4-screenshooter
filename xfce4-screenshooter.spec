@@ -1,6 +1,6 @@
 Summary:	Screen capture tool for Xfce
 Name:		xfce4-screenshooter
-Version:	1.4.90.0
+Version:	1.5.0
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
