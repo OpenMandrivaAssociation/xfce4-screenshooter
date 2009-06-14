@@ -1,6 +1,6 @@
 Summary:	Screen capture tool for Xfce
 Name:		xfce4-screenshooter
-Version:	1.5.1
+Version:	1.6.0
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -10,6 +10,8 @@ Requires:	xfce4-panel >= 4.4.2
 BuildRequires:	xfce4-panel-devel >= 4.4.2
 BuildRequires:	libxfcegui4-devel >= 4.4.2
 BuildRequires:	perl(XML::Parser)
+BuildRequires:	libcurl-devel
+BuildRequires:	libxmlrpc-c-devel
 Obsoletes:	xfce-screenshooter-plugin
 Obsoletes:	xfce4-screenshooter-plugin < 1.4.90.0
 Provides:	xfce4-screenshooter-plugin
