@@ -9,7 +9,7 @@ Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/xfce4-screenshooter
 Source0:	http://archive.xfce.org/src/apps/xfce4-screenshooter/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	xfce4-panel-devel >= 4.4.2
-BuildRequires:	libxfcegui4-devel >= 4.4.2
+BuildRequires:	libxfce4ui-devel >= 4.7.0
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	libcurl-devel
 BuildRequires:	libsoup-devel
