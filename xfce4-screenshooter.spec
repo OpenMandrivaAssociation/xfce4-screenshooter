@@ -8,6 +8,7 @@ License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/xfce4-screenshooter
 Source0:	http://archive.xfce.org/src/apps/xfce4-screenshooter/%{url_ver}/%{name}-%{version}.tar.bz2
+Patch0:		xfce4-screenshooter-1.8.0-fix-linkage.patch
 BuildRequires:	xfce4-panel-devel >= 4.9.0
 BuildRequires:	libxfce4ui-devel >= 4.9.1
 BuildRequires:	exo-devel >= 0.7.2
@@ -29,10 +30,15 @@ it to the clipboard, or open it using another application.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+# (tpg) needed for patch 0
+NOCONFIGURE=1 xdt-autogen
+
 %configure2_5x \
-	--disable-static
+	--disable-static \
+	--enable-xfixes
 
 %make
 
