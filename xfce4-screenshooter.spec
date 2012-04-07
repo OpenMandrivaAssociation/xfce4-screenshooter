@@ -3,32 +3,30 @@
 Summary:	Screen capture tool for Xfce
 Name:		xfce4-screenshooter
 Version:	1.8.0
-Release:	%mkrel 1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/xfce4-screenshooter
 Source0:	http://archive.xfce.org/src/apps/xfce4-screenshooter/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	xfce4-panel-devel >= 4.4.2
-BuildRequires:	libxfce4ui-devel >= 4.7.0
-BuildRequires:	exo-devel >= 0.5.0
+BuildRequires:	xfce4-panel-devel >= 4.9.0
+BuildRequires:	libxfce4ui-devel >= 4.9.1
+BuildRequires:	exo-devel >= 0.7.2
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	libcurl-devel
 BuildRequires:	libsoup-devel
 Obsoletes:	xfce-screenshooter-plugin
 Obsoletes:	xfce4-screenshooter-plugin < 1.4.90.0
 Provides:	xfce4-screenshooter-plugin
-Requires:	xfce4-panel >= 4.4.2
+Requires:	xfce4-panel >= 4.9.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
-This application allows you to capture the entire screen, 
-the active window or a selected region. You can set the delay 
-that elapses before the screenshot is taken and the action that 
-will be done with the screenshot: save it to a PNG file, copy 
+This application allows you to capture the entire screen,
+the active window or a selected region. You can set the delay
+that elapses before the screenshot is taken and the action that
+will be done with the screenshot: save it to a PNG file, copy
 it to the clipboard, or open it using another application.
- 
-A plugin for the Xfce panel is also available.
- 
+
 %prep
 %setup -q
 
@@ -39,16 +37,11 @@ A plugin for the Xfce panel is also available.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%find_lang %{name}
-
-%clean
-rm -rf %{buildroot}
+%find_lang %{name} %{name}.lang
 
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc AUTHORS README
 %{_bindir}/*
 %{_libdir}/xfce4/panel-plugins/*
