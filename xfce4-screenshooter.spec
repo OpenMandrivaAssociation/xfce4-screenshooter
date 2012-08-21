@@ -2,8 +2,8 @@
 
 Summary:	Screen capture tool for Xfce
 Name:		xfce4-screenshooter
-Version:	1.8.0
-Release:	3
+Version:	1.8.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/xfce4-screenshooter
@@ -45,7 +45,7 @@ NOCONFIGURE=1 xdt-autogen
 %install
 %makeinstall_std
 
-%find_lang %{name} %{name}.lang
+%find_lang %{name}
 
 %files -f %{name}.lang
 %doc AUTHORS README
