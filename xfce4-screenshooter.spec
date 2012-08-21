@@ -50,8 +50,8 @@ NOCONFIGURE=1 xdt-autogen
 %files -f %{name}.lang
 %doc AUTHORS README
 %{_bindir}/*
-%{_libdir}/xfce4/panel-plugins/*
-%{_datadir}/xfce4/panel-plugins/*.desktop
+%{_libdir}/xfce4/panel/plugins/*
+%{_datadir}/xfce4/panel/plugins/*.desktop
 %{_datadir}/applications/xfce4-screenshooter.desktop
 %{_iconsdir}/hicolor/*/apps/*.*g
 %{_mandir}/man1/*
