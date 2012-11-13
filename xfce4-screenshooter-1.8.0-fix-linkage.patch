@@ -1,0 +1,13 @@
+diff -Naur xfce4-screenshooter-1.8.0/Makefile.am xfce4-screenshooter-1.8.0.tpg/Makefile.am
+--- xfce4-screenshooter-1.8.0/Makefile.am	2011-07-31 21:29:00.000000000 +0000
++++ xfce4-screenshooter-1.8.0.tpg/Makefile.am	2012-04-07 23:23:54.341036202 +0000
+@@ -51,7 +51,8 @@
+ 	@SOUP_LIBS@ \
+ 	@LIBXEXT_LIBS@ \
+ 	@LIBX11_LIBS@ \
+-	@XFIXES_LIBS@
++	@XFIXES_LIBS@ \
++	-lm
+ 
+ lib_libscreenshooter_built_sources = \
+ 	lib/screenshooter-marshal.c lib/screenshooter-marshal.h
