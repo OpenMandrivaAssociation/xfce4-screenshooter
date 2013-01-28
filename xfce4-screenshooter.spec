@@ -33,6 +33,9 @@ it to the clipboard, or open it using another application.
 %patch0 -p1
 
 %build
+# (tpg) for new automake
+sed -i -e 's,AM_CONFIG_HEADER,AC_CONFIG_HEADERS,g' configure.*
+
 # (tpg) needed for patch 0
 NOCONFIGURE=1 xdt-autogen
 
