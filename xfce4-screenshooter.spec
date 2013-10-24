@@ -9,7 +9,7 @@ Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/xfce4-screenshooter
 Source0:	http://archive.xfce.org/src/apps/xfce4-screenshooter/%{url_ver}/%{name}-%{version}.tar.bz2
 Patch0:		xfce4-screenshooter-1.8.0-fix-linkage.patch
-BuildRequires:	pkgconfig(xfce4-panel-1.0)
+BuildRequires:	pkgconfig(libxfce4panel-1.0)
 BuildRequires:	pkgconfig(libxfce4ui-1)
 BuildRequires:	pkgconfig(exo-1)
 BuildRequires:	perl(XML::Parser)
