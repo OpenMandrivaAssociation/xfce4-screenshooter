@@ -3,14 +3,14 @@
 Summary:	Screen capture tool for Xfce
 Name:		xfce4-screenshooter
 Version:	1.8.1
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/xfce4-screenshooter
 Source0:	http://archive.xfce.org/src/apps/xfce4-screenshooter/%{url_ver}/%{name}-%{version}.tar.bz2
 Patch0:		xfce4-screenshooter-1.8.0-fix-linkage.patch
 BuildRequires:	pkgconfig(libxfce4panel-1.0)
-BuildRequires:	pkgconfig(libxfce4ui-1)
+BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
 BuildRequires:	pkgconfig(exo-1)
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	curl-devel
@@ -58,4 +58,3 @@ NOCONFIGURE=1 xdt-autogen
 %{_mandir}/man1/*
 %{_datadir}/xfce4/doc/*/images/*.png
 %{_datadir}/xfce4/doc/*/*.html
-
