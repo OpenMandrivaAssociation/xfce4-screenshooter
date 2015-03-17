@@ -8,6 +8,7 @@ License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/xfce4-screenshooter
 Source0:	http://archive.xfce.org/src/apps/xfce4-screenshooter/%{url_ver}/%{name}-%{version}.tar.bz2
+Source1:	%{name}.rpmlintrc
 Patch0:		xfce4-screenshooter-1.8.0-fix-linkage.patch
 BuildRequires:	pkgconfig(libxfce4panel-1.0)
 BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
@@ -37,7 +38,7 @@ sed -i -e 's,AM_CONFIG_HEADER,AC_CONFIG_HEADERS,g' configure.*
 # (tpg) needed for patch 0
 NOCONFIGURE=1 xdt-autogen
 
-%configure2_5x \
+%configure \
 	--disable-static \
 	--enable-xfixes
 
