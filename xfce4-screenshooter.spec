@@ -1,18 +1,19 @@
-%define url_ver %(echo %{version} | cut -c 1-3)
+%define url_ver %(echo %{version} | cut -d. -f 1,2)
+%define _disable_rebuild_configure 1
 
 Summary:	Screen capture tool for Xfce
 Name:		xfce4-screenshooter
-Version:	1.8.1
-Release:	6
+Version:	1.9.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/xfce4-screenshooter
 Source0:	http://archive.xfce.org/src/apps/xfce4-screenshooter/%{url_ver}/%{name}-%{version}.tar.bz2
 Source1:	%{name}.rpmlintrc
-Patch0:		xfce4-screenshooter-1.8.0-fix-linkage.patch
-BuildRequires:	pkgconfig(libxfce4panel-1.0)
-BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
-BuildRequires:	pkgconfig(exo-1)
+BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(libxfce4panel-2.0)
+BuildRequires:	pkgconfig(libxfce4ui-2) >= 4.11
+BuildRequires:	pkgconfig(exo-2)
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	curl-devel
 BuildRequires:	pkgconfig(libsoup-2.4)
@@ -29,15 +30,9 @@ it to the clipboard, or open it using another application.
 
 %prep
 %setup -q
-%patch0 -p1
+%apply_patches
 
 %build
-# (tpg) for new automake
-sed -i -e 's,AM_CONFIG_HEADER,AC_CONFIG_HEADERS,g' configure.*
-
-# (tpg) needed for patch 0
-NOCONFIGURE=1 xdt-autogen
-
 %configure \
 	--disable-static \
 	--enable-xfixes
@@ -57,5 +52,4 @@ NOCONFIGURE=1 xdt-autogen
 %{_datadir}/applications/xfce4-screenshooter.desktop
 %{_iconsdir}/hicolor/*/apps/*.*g
 %{_mandir}/man1/*
-%{_datadir}/xfce4/doc/*/images/*.png
-%{_datadir}/xfce4/doc/*/*.html
+%{_datadir}/appdata/%{name}.appdata.xml
