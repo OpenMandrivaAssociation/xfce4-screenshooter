@@ -52,4 +52,4 @@ it to the clipboard, or open it using another application.
 %{_datadir}/applications/xfce4-screenshooter.desktop
 %{_iconsdir}/hicolor/*/apps/*.*g
 %{_mandir}/man1/*
-%{_datadir}/appdata/%{name}.appdata.xml
+%{_datadir}/metainfo/xfce4-screenshooter.appdata.xml 
