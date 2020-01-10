@@ -30,7 +30,7 @@ it to the clipboard, or open it using another application.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure \
