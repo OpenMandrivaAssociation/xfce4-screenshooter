@@ -3,7 +3,7 @@
 
 Summary:	Screen capture tool for Xfce
 Name:		xfce4-screenshooter
-Version:	1.9.7
+Version:	1.9.8
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -45,7 +45,7 @@ it to the clipboard, or open it using another application.
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS README
+%doc AUTHORS README*
 %{_bindir}/*
 %{_libdir}/xfce4/panel/plugins/*
 %{_datadir}/xfce4/panel/plugins/*.desktop
