@@ -17,6 +17,7 @@ BuildRequires:	pkgconfig(exo-2)
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	curl-devel
 BuildRequires:	pkgconfig(libsoup-3.0)
+BuildRequires:	pkgconfig(libxml-2.0)
 %rename		xfce-screenshooter-plugin
 %rename		xfce4-screenshooter-plugin
 Requires:	xfce4-panel >= 4.9.0
