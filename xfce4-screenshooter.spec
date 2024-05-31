@@ -3,12 +3,12 @@
 
 Summary:	Screen capture tool for Xfce
 Name:		xfce4-screenshooter
-Version:	1.10.5
+Version:	1.10.6
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
-URL:		http://goodies.xfce.org/projects/applications/xfce4-screenshooter
-Source0:	http://archive.xfce.org/src/apps/xfce4-screenshooter/%{url_ver}/%{name}-%{version}.tar.bz2
+URL:		https://goodies.xfce.org/projects/applications/xfce4-screenshooter
+Source0:	https://archive.xfce.org/src/apps/xfce4-screenshooter/%{url_ver}/%{name}-%{version}.tar.bz2
 Source1:	%{name}.rpmlintrc
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
