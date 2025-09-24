@@ -19,6 +19,7 @@ BuildRequires:	perl(XML::Parser)
 BuildRequires:	curl-devel
 BuildRequires:	pkgconfig(libsoup-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
+BuildRequires:	pkgconfig(wayland-protocols)
 %rename		xfce-screenshooter-plugin
 %rename		xfce4-screenshooter-plugin
 Requires:	xfce4-panel >= 4.9.0
