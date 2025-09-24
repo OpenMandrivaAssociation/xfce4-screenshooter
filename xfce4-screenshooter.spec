@@ -51,7 +51,6 @@ it to the clipboard, or open it using another application.
 %doc AUTHORS README*
 %{_bindir}/*
 %{_libdir}/xfce4/panel/plugins/*
-%{_libexecdir}/xfce4/screenshooter/scripts/imgur-upload.sh
 %{_datadir}/xfce4/panel/plugins/*.desktop
 %{_datadir}/applications/xfce4-screenshooter.desktop
 %{_iconsdir}/hicolor/*/apps/*.*g
