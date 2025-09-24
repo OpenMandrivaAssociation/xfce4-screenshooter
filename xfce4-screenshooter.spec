@@ -10,6 +10,7 @@ Group:		Graphical desktop/Xfce
 URL:		https://goodies.xfce.org/projects/applications/xfce4-screenshooter
 Source0:	https://archive.xfce.org/src/apps/xfce4-screenshooter/%{url_ver}/%{name}-%{version}.tar.bz2
 Source1:	%{name}.rpmlintrc
+BuildRequires:	meson
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
 BuildRequires:	pkgconfig(libxfce4ui-2) 
@@ -30,18 +31,18 @@ will be done with the screenshot: save it to a PNG file, copy
 it to the clipboard, or open it using another application.
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
-%configure \
-	--disable-static \
-	--enable-xfixes
+%meson \
+		-Dxfixes=enabled \
+		-Dx11=enabled \
+		-Dwayland=enabled
 
-%make_build
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %find_lang %{name}
 
