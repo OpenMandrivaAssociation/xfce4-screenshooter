@@ -12,6 +12,7 @@ Source0:	https://archive.xfce.org/src/apps/xfce4-screenshooter/%{url_ver}/%{name
 Source1:	%{name}.rpmlintrc
 BuildRequires:	meson
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(gtk-layer-shell-0)
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
 BuildRequires:	pkgconfig(libxfce4ui-2) 
 BuildRequires:	pkgconfig(exo-2)
